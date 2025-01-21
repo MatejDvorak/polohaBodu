@@ -1,13 +1,16 @@
-let x = document.getElementById("tbx");
-let y = document.getElementById("tby");
+let tbx = document.getElementById("tbx");
+let tby = document.getElementById("tby");
 let tla = document.getElementById("tla");
 let odpoved = document.getElementById("odpoved");
 
-function square(x, y) {
+tla.onclick = function ctverec() {
+    let x=tbx.value
+    let y=tby.value
 
+    if (x<0 || x>50 || y<0 || y>50) {
+        odpoved.innerText="Bod není ve čtvereci";
+    }
+    else {
+        odpoved.innerText="Bod je ve čtverci";
+    }
 }
-btn.addEventListener("click", function() {
-    let x = Number(xInput.value);
-    let y = Number(yInput.value);
-    square(x, y);
-});
